@@ -56,7 +56,7 @@ public:
   int peek() override;
   void flush() override;
   size_t read(uint8_t *buf, size_t size);
-  size_t readBytes(char *buffer, size_t length) {
+  size_t readBytes(char *buffer, size_t length) override {
     return read((uint8_t *)buffer, length);
   }
 
