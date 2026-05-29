@@ -1,4 +1,5 @@
 #include "Middlewares.h"
+#include <WString_compat.h>
 
 void LoggingMiddleware::setOutput(Print &output) {
   _out = &output;

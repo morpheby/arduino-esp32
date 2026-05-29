@@ -112,8 +112,8 @@ public:
   virtual void close();
   void stop();
 
-  const String AuthTypeDigest = F("Digest");
-  const String AuthTypeBasic = F("Basic");
+  static const String AuthTypeDigest;
+  static const String AuthTypeBasic;
 
   void chunkResponseBegin(const char *contentType = "text/plain");
   void chunkWrite(const char *data, size_t length);

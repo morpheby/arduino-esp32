@@ -7,6 +7,7 @@
 #include "Uri.h"
 #include <MD5Builder.h>
 #include <base64.h>
+#include <WString_compat.h>
 
 using namespace mime;
 

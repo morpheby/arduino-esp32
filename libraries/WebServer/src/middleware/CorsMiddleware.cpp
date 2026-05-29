@@ -1,4 +1,7 @@
 #include "Middlewares.h"
+#include <WString_compat.h>
+
+CorsMiddleware::CorsMiddleware() : _origin("*"), _methods("*"), _headers("*") {}
 
 CorsMiddleware &CorsMiddleware::setOrigin(const char *origin) {
   _origin = origin;

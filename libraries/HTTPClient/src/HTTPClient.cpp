@@ -35,6 +35,8 @@
 /// Cookie jar support
 #include <time.h>
 
+#include <WString_compat.h>
+
 #ifdef HTTPCLIENT_1_1_COMPATIBLE
 class TransportTraits {
 public:

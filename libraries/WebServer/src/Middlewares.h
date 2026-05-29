@@ -19,6 +19,8 @@ private:
 
 class CorsMiddleware : public Middleware {
 public:
+  CorsMiddleware();
+
   CorsMiddleware &setOrigin(const char *origin);
   CorsMiddleware &setMethods(const char *methods);
   CorsMiddleware &setHeaders(const char *headers);
@@ -30,9 +32,9 @@ public:
   bool run(WebServer &server, Middleware::Callback next) override;
 
 private:
-  String _origin = F("*");
-  String _methods = F("*");
-  String _headers = F("*");
+  String _origin;
+  String _methods;
+  String _headers;
   bool _credentials = true;
   uint32_t _maxAge = 86400;
 };

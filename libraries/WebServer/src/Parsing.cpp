@@ -25,6 +25,7 @@
 #include "NetworkClient.h"
 #include "WebServer.h"
 #include "detail/mimetable.h"
+#include <WString_compat.h>
 
 #ifndef WEBSERVER_MAX_POST_ARGS
 #define WEBSERVER_MAX_POST_ARGS 32

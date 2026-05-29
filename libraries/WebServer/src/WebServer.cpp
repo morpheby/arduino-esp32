@@ -33,6 +33,7 @@
 #include "MD5Builder.h"
 #include "SHA1Builder.h"
 #include "base64.h"
+#include <WString_compat.h>
 
 static const char AUTHORIZATION_HEADER[] = "Authorization";
 static const char qop_auth[] PROGMEM = "qop=auth";
@@ -40,6 +41,9 @@ static const char qop_auth_quoted[] PROGMEM = "qop=\"auth\"";
 static const char WWW_Authenticate[] = "WWW-Authenticate";
 static const char Content_Length[] = "Content-Length";
 static const char ETAG_HEADER[] = "If-None-Match";
+
+const String WebServer::AuthTypeDigest = F("Digest");
+const String WebServer::AuthTypeBasic = F("Basic");
 
 WebServer::WebServer(IPAddress addr, int port) : _server(addr, port) {
   log_v("WebServer::Webserver(addr=%s, port=%d)", addr.toString().c_str(), port);
